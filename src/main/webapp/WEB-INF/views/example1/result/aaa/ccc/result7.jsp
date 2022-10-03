@@ -1,0 +1,21 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h1>result7.jsp 페이지 입니다.</h1>
+	<h2>받은 데이터를 아래에 출력해 주세요</h2>
+	<hr />
+	<c:forEach var="item" items="${test1}">
+	<h1>test1 : ${item}</h1>
+	</c:forEach>
+	<c:forEach var="item" items="${test2}">
+	<h1>test2 : ${item}</h1>
+	</c:forEach>
+</body>
+</html>

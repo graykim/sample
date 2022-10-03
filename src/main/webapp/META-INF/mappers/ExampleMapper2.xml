@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.goodee.dao.ExampleDAO2">
+	<select id="selectData" resultType="testVO2">
+		select * from examtable
+	</select>
+	
+	<insert id="insertData">
+		insert into examtable(data1,data2,data3) 
+		values(#{data1},#{data2},#{data3})
+	</insert>
+	
+	<update id="updateData">
+		update examtable set data1=#{data1}, data2=#{data2}, data3=#{data3}
+		where id=#{id}
+	</update>
+	
+	<select id="selectId" resultType="testVO2">
+	select * from examtable where id = #{id}
+	</select>
+	
+	<update id="updateData2">
+		update examtable set data2=#{data2}, data3=#{data3}
+		where data1=#{data1}
+	</update>
+	
+	<delete id="deleteData">
+		delete from examtable where id = #{id}
+	</delete>
+	
+	<delete id="deleteData2">
+		delete from examtable where data1=#{data1} and data2=#{data2} and data3=#{data3}
+	</delete>
+	
+</mapper>
